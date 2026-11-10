@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKER_HOST   = 'unix:///Users/apple/.docker/run/docker.sock'
-        PATH = '/Users/apple/.docker/bin'
+        PATH = "/Users/apple/.docker/bin:/bin:/usr/bin:/usr/local/bin:/opt/homebrew/bin"
         DOCKER_CONFIG = '/Users/apple/.jenkins-docker'
 
         IMAGE_NAME = 'jenkins-lab'
