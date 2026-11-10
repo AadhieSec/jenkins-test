@@ -23,6 +23,17 @@ pipeline {
             }
         }
 
+        stage('Docker Check') {
+             steps {
+                sh '''
+                    whoami
+                    which docker
+                    docker version
+                    docker ps
+                '''
+    }
+}
+
         stage('Success') {
             steps {
                 echo 'Jenkins pipeline completed!'
